@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "65669740-6119-469e-88ed-edef957fa168",
+		"name": "collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30943091"
+	},
+	"item": [
+		{
+			"name": "UploadForm",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"note_name\": \"note\",\r\n    \"note\": \"create note\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/upload",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "{{url}}/notes",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "note_name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/notes/note",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"notes",
+						"note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "note_name",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/notes/note",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"notes",
+						"note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "note_name",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/notes/note",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"notes",
+						"note"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
