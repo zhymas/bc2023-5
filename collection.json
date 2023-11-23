@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "65669740-6119-469e-88ed-edef957fa168",
-		"name": "collection",
+		"_postman_id": "d44c231d-a9df-4fb6-ae07-43b9c8d94030",
+		"name": "New Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "30943091"
+		"_exporter_id": "31250421"
 	},
 	"item": [
 		{
@@ -12,34 +12,44 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}",
+					"raw": "localhost:8000/UploadForm.html",
 					"host": [
-						"{{url}}"
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"UploadForm.html"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "upload",
+			"name": "Upload",
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"note_name\": \"note\",\r\n    \"note\": \"create note\"\r\n}"
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "note_name",
+							"value": "test2",
+							"type": "text"
+						},
+						{
+							"key": "note",
+							"value": "text2",
+							"type": "text"
+						}
+					]
 				},
 				"url": {
-					"raw": "{{url}}/upload",
+					"raw": "localhost:8000/upload",
 					"host": [
-						"{{url}}"
+						"localhost"
 					],
+					"port": "8000",
 					"path": [
 						"upload"
 					]
@@ -48,17 +58,16 @@
 			"response": []
 		},
 		{
-			"name": "notes",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"name": "Notes",
 			"request": {
 				"method": "GET",
+				"header": [],
 				"url": {
-					"raw": "{{url}}/notes",
+					"raw": "localhost:8000/notes",
 					"host": [
-						"{{url}}"
+						"localhost"
 					],
+					"port": "8000",
 					"path": [
 						"notes"
 					]
@@ -67,60 +76,61 @@
 			"response": []
 		},
 		{
-			"name": "note_name",
+			"name": "NoteName",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"url": {
-					"raw": "{{url}}/notes/note",
+					"raw": "localhost:8000/notes/test1",
 					"host": [
-						"{{url}}"
+						"localhost"
 					],
+					"port": "8000",
 					"path": [
 						"notes",
-						"note"
+						"test1"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "note_name",
+			"name": "NoteName",
 			"request": {
 				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Update text2"
+				},
 				"url": {
-					"raw": "{{url}}/notes/note",
+					"raw": "localhost:8000/notes/test2",
 					"host": [
-						"{{url}}"
+						"localhost"
 					],
+					"port": "8000",
 					"path": [
 						"notes",
-						"note"
+						"test2"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "note_name",
+			"name": "NoteDelete",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/notes/note",
+					"raw": "localhost:8000/notes/test1",
 					"host": [
-						"{{url}}"
+						"localhost"
 					],
+					"port": "8000",
 					"path": [
 						"notes",
-						"note"
+						"test1"
 					]
 				}
 			},
